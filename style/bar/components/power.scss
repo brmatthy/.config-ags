@@ -1,0 +1,12 @@
+@import "../../theme.scss";
+
+.power-label {
+  color: $text;
+  background: $background;
+}
+
+.power-label:hover {
+  color: $error;
+}
+
+

@@ -1,0 +1,12 @@
+@import "../../theme.scss";
+
+.clock-container {
+  background: $background;
+}
+
+.clock-time {
+  color: $text;
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
+}

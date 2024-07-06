@@ -1,0 +1,26 @@
+@import "./theme.scss";
+
+.power-menu-box {
+  background: $background;
+  margin: 0px;
+  padding: 0.25em;
+  border-radius: 11px;
+  border: 2px solid $primary;
+}
+
+.power-menu-btn {
+  margin: 0.25em;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.power-menu-icon {
+  font-size: 24px;
+  margin-left: 0.55em;
+}
+
+
+.power-menu-btn:focus {
+  color: $primary;
+  border: 2px solid $primary;
+}

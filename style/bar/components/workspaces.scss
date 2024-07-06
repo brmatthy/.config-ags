@@ -1,0 +1,29 @@
+@import "../../theme.scss";
+
+
+.ws-focussed {
+  color: $background;
+  background: $primary;
+}
+
+.ws-visible {
+  color: $primary;
+  background: $background;
+  border: 2px solid $background;
+}
+
+.ws-inactive {
+  color: $text-alt;
+  background: $background;
+  border: 2px solid $background;
+}
+
+.ws-inactive:hover {
+  color: $text;
+}
+
+.ws-btn {
+  margin-left: 4px;
+  border-radius: 5px;
+}
+

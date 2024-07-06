@@ -1,0 +1,54 @@
+@import "./theme.scss";
+
+.dialog {
+  min-width: 350px;
+  border-radius: 11px;
+  padding: 0.5em;
+  border: 2px solid $primary;
+  margin-bottom: 0.25em;
+}
+
+
+.dialog-title {
+    color: $text;
+    font-size: 1.4em;
+}
+
+.dialog-body {
+    color: $text-alt;
+}
+
+.dialog-actions .dialog-action-btn {
+    margin: 0 .4em;
+    margin-top: .8em;
+}
+
+.dialog-actions .dialog-action-btn:first-child {
+    margin-left: 0;
+}
+
+.dialog-actions .dialog-action-btn:last-child {
+    margin-right: 0;
+}
+
+.dialog-action-btn:focus {
+  color: $primary;
+  border: 2px solid $primary;
+}
+
+.dialog-icon-avatar{
+  font-size: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  color: $text;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+}
+
+.dialog-img-avatar {
+  min-width: 64px;
+  min-height: 64px;
+  margin: 0.25em;
+  margin-right: 1em;
+  border-radius: 7px;
+}
