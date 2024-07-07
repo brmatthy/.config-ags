@@ -6,6 +6,7 @@ import power from "./components/power";
 import networkIndicator from "./components/network";
 import batteryProgress from "./components/battery";
 import multimedia from "./components/multimedia";
+import windowName from "./components/window_name";
 
 const left = Widget.Box({
   children: [workspaces()]
@@ -28,7 +29,7 @@ const bar = Widget.CenterBox({
   start_widget: Widget.Box({
     children: [
       left,
-      RoundedAngleEnd("topright", { class_name: "angle" })
+      RoundedAngleEnd("topright", { class_name: "angle" }),
     ]
   }),
   center_widget: Widget.Box({

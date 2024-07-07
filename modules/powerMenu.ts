@@ -85,31 +85,31 @@ const btnProps: [string, string, string, Function][] = [
     "Lock",
     "Are you sure you want to lock the device?",
     "system-lock-screen",
-    () => print("Locked!")
+    () => Utils.execAsync(["swaylock"])
   ],
   [
     "Suspend",
     "Are you sure you want to suspend the device?",
     "weather-clear-night",
-    () => print("Sleep!")
+    () => Utils.execAsync(["systemctl", "suspend"])
   ],
   [
     "Log out",
     "Are you sure you want to log out?",
     "system-log-out",
-    () => print("Log out!")
+    () => Utils.execAsync(["hyprctl", "dispatch", "exit"])
   ],
   [
     "Reboot",
     "Are you sure you want to reboot the device?",
     "system-reboot",
-    () => print("Reboot!")
+    () => Utils.execAsync(["systemctl", "reboot"])
   ],
   [
     "Shutdown",
     "Are you sure you want to shut the device down?",
     "system-shutdown",
-    () => print("Locked!")
+    () => Utils.execAsync(["systemctl", "poweroff"])
   ]
 ]
 
