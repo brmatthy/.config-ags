@@ -27,6 +27,7 @@ export function closeMediaWidget() {
 export default function multimedia() {
   return Widget.EventBox({
     onPrimaryClick: () => getFirstPlayer().playPause(),
+    onSecondaryClick: () => Utils.execAsync(["hyprctl", "dispatch", "focuswindow", `${getFirstPlayer().identity}`]),
     onScrollUp: () => getFirstPlayer().next(),
     onScrollDown: () => getFirstPlayer().previous(),
     onHover: () => App.openWindow("mediaWidget"),
