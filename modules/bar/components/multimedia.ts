@@ -7,15 +7,22 @@ function getFirstPlayer() {
   return spotifyPlayer ? spotifyPlayer : mpris.players[0]
 }
 
+const class_name = "bar-label bar-comp-wrapper";
+
 function selectIcon(players: MprisPlayer[]) {
-  const class_name = "bar-label bar-comp-wrapper";
   const musicIcon = Widget.Icon({ icon: "audio-x-generic-symbolic", class_name: class_name })
   const spotifyIcon = Widget.Label({ label: "", class_name: class_name })
 
   return players.some(p => p.name == "spotify") ? spotifyIcon : musicIcon;
 }
 
+function track(players: MprisPlayer[]) {
+  const player = getFirstPlayer();
+  return Widget.Label({ label: player.bind("track_title"), class_name: class_name })
+}
+
 const showIcon = Widget.Box({ child: mpris.bind("players").transform(selectIcon) })
+const showTrack = Widget.Box({ child: mpris.bind("players").transform(track) })
 
 export function closeMediaWidget() {
   const mediaWidget = App.getWindow("mediaWidget");
@@ -32,6 +39,6 @@ export default function multimedia() {
     onScrollDown: () => getFirstPlayer().previous(),
     onHover: () => App.openWindow("mediaWidget"),
     onHoverLost: () => closeMediaWidget(),
-    child: showIcon
+    child: Widget.Box([showTrack, showIcon])
   })
 }

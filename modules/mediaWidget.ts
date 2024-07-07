@@ -160,7 +160,7 @@ const media = Widget.Box({
 const mediaWidget = Widget.Window({
   monitor: defaultMonitor,
   anchor: ["top", "right"],
-  margins: [0, 0, 10, 0],
+  margins: [0, 90, 10, 0],
   name: "mediaWidget",
   child: media,
 })
